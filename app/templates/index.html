@@ -216,7 +216,6 @@ li {
         <table class="table table-hover table-dark">
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th scope="col">Produto</th>
                 <th scope="col">Código</th>
                 <th scope="col">Ano de Validade</th>
@@ -227,7 +226,6 @@ li {
             <tbody>
                 {% for dbs in db %}
               <tr>
-                <th scope="row">{{dbs.id}}</th>
                 <td>{{dbs.produto}}</td>
                 <td>{{dbs.codigo}}</td>
                 <td>{{dbs.ano_validade}}</td>
