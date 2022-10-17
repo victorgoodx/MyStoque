@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-victorgoodx-mystoque-4qj8coc1apm.ws-us71.gitpod.io','https://*.127.0.0.1']
 
 # Application definition
 
