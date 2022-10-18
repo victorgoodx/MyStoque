@@ -206,9 +206,15 @@ li {
     </div>
 
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <a href="/form/" class="btn btn-warning">Cadastrar Produto</a>
+      <form method="get">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Buscar por produto...">
+      </form>
     </div>
 
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <a href="/form/" class="btn btn-warning">Cadastrar Produto</a>
+    </div>
+  
     <div class="col-md-8 m-auto text-center">
         <table class="table table-hover table-secondary">
             <thead>
@@ -239,5 +245,9 @@ li {
     </div>
     {% load static %}
     <script src="{% static 'javascript.js' %}"></script>
+
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+      <button onclick="window.print();return false;" class="btn btn-warning">Imprimir</button>
+    </div>
 </body>
 </html>

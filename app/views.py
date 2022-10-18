@@ -1,3 +1,4 @@
+from re import search
 from django.shortcuts import render, redirect
 from app.forms import ProdutosForm
 from app.models import Produtos
@@ -5,7 +6,11 @@ from app.models import Produtos
 # Create your views here.
 def home(request):
     data = {}
-    data['db'] = Produtos.objects.all()
+    search = request.GET.get('search')
+    if search:
+        data['db'] = Produtos.objects.filter(produto__icontains=search)
+    else:
+        data['db'] = Produtos.objects.all()
     return render(request, 'index.html', data)
 
 def form(request):
