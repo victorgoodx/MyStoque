@@ -216,11 +216,13 @@ li {
    <div class="col-8 m-auto pt-2 pb-2 text-center">
     <form action="{% url 'login' %}" method="POST">{% csrf_token %}
         <h1>login</h1>
+        <label>Username:</label>
         <input type="text" placeholder="Username..." name="username">
         <br>
+        <label>Senha:</label>
         <input type="password" placeholder="Senha..." name="senha" >
         <br>
-        <input type="submit" value="logar" >
+        <input type="submit" value="Entrar" class="btn btn-success" >
         <br>
     </form>
   </div>

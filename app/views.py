@@ -6,6 +6,7 @@ from app.models import Produtos
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
+from django.contrib.auth import logout as logout_django
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -71,6 +72,6 @@ def login(request):
             return redirect('login')
 
 def logout(request):
-    return render(request, 'login.html')
-
+    logout_django(request)
+    return redirect('home')
     
