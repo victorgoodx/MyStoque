@@ -1,5 +1,5 @@
 from pyexpat.errors import messages
-from telnetlib import LOGOUT
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from app.forms import ProdutosForm
 from app.models import Produtos
@@ -63,13 +63,11 @@ def login(request):
         senha = request.POST.get('senha')
 
         user = authenticate(username=username, password=senha)
-
         if user:
             login_django(request, user)
             return render(request, 'index.html')
         else:
-            messages.info(request, "usuario ou senha invalidos")
-            return redirect('login')
+            return HttpResponse('login ou senha inválidos')
 
 def logout(request):
     logout_django(request)

@@ -214,7 +214,8 @@ li {
 
   <div class="formulario_login">
    <div class="col-8 m-auto pt-2 pb-2 text-center">
-    <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+    <form action="{% url 'login' %}" method="POST">
+      {% csrf_token %}
         <h1>login</h1>
         <label>Username:</label>
         <input type="text" placeholder="Username..." name="username">
